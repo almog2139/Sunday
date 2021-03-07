@@ -1,0 +1,69 @@
+.user-notifications {
+    position: absolute;
+    width: 500px;
+    max-height: 500px;
+    overflow-y: auto;
+    @include scrollbars(8px, #afafaf);
+    top: 0;
+    left: 60px;
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: 0 0 10px 0 rgba(75, 75, 75, 0.1);
+    border-radius: 3px;
+    padding: 10px;
+    header{
+        svg{
+            color: $blue;
+            &:hover {
+                background-color: $lightgrey;
+            }
+        }
+    }
+
+    .notification-details {
+        width: 100%;
+        margin-bottom: 5px;
+        border-radius: 3px;
+        background-color: #f5f6f8;
+        word-break: break-word;
+        text-align: start;
+        transition: all 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        &:hover {
+            background-color: $lightgrey;
+        }
+
+        & > div {
+            align-items: center;
+        }
+
+        & > div:first-child {
+            margin-bottom: 8px;
+        }
+
+        & p {
+            margin: 0;
+        }
+
+        & .user-thumbnail {
+            margin-right: 8px;
+        }
+        svg {
+            // font-size: small;
+            margin-right: 0 5px 0 0;
+            color: $grey;
+            font-size: 1.6rem;
+
+            &:hover {
+                background-color: unset;
+            }
+        }
+    }
+}
